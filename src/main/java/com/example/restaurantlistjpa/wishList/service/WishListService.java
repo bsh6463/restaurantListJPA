@@ -89,6 +89,7 @@ public class WishListService {
            item.setVisit(true);
            int addCount = item.getVisitCount() + 1;
            item.setVisitCount(addCount);
+           wishListRepository.save(item);
         }
     }
 

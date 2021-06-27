@@ -54,7 +54,8 @@ class WishListServiceTest {
         wishListService.addVisit(2);
 
         var result = wishListService.findAll();
-        Assertions.assertEquals(3, wishListRepository.findById(3));
+        result.forEach(System.out::println);
+        Assertions.assertEquals(3, wishListRepository.findById(2).get().getVisitCount());
 
     }
 
